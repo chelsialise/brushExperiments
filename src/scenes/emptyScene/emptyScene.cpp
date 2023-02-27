@@ -26,7 +26,7 @@ void emptyScene::update(){
 //---------------------------------------------------------------
 void emptyScene::draw(){
     
-    //ofSetColor(0, 0, 0);
+    //ofSetColor(255, 255, 255);
     //ofSetLineWidth(10);
     //line.draw();
     

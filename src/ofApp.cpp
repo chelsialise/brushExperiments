@@ -5,6 +5,7 @@
 #include "ribbonBrushScene.h"
 #include "starBrushScene.h"
 #include "dotProductBrushScene.h"
+#include "starTubeBrushScene.h"
 
 
 //--------------------------------------------------------------
@@ -28,6 +29,7 @@ void ofApp::setup(){
     SM.scenes.push_back(new ribbonBrushScene());
     SM.scenes.push_back(new starBrushScene());
     SM.scenes.push_back(new dotProductBrushScene());
+    SM.scenes.push_back(new starTubeBrushScene());
 
     for (int i = 0; i < SM.scenes.size(); i++){
         

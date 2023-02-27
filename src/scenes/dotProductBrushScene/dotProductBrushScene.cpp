@@ -12,7 +12,7 @@ void dotProductBrushScene::setup(){
 //---------------------------------------------------------------
 void dotProductBrushScene::update(){
    
-    mousePos = mousePos * 0.1 + mouseFbo() * 0.9;
+    mousePos = mousePos * 0.2 + mouseFbo() * 0.8;
     line.addVertex(mousePos);
     
     resolution = 50;

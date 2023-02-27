@@ -13,7 +13,12 @@ public:
     
     ofxLabel sceneTitle;
     
-//    ofPolyline line;
-//    ofPoint mousePos;
+    ofPolyline line;
+    ofPoint mousePos;
+    int resolution;
+    
+    //vector<ofMesh> meshes;
+    float radius;
+    int numDeleted;
     
 };
