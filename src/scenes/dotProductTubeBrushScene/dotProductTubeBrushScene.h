@@ -3,7 +3,7 @@
 #include "ofMain.h"
 #include "baseScene.h"
 
-class starTubeBrushScene : public baseScene {
+class dotProductTubeBrushScene : public baseScene {
     
 public:
     
@@ -17,7 +17,5 @@ public:
     ofPoint mousePos;
     int resolution;
     float radius;
-    //vector<ofMesh> meshes;
-    //int numDeleted;
     
 };

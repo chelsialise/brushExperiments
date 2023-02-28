@@ -15,9 +15,10 @@
 		2F8505A15BCE28D0305CFA2A /* starBrushScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0401F21CC88FF29A50E63F0A /* starBrushScene.cpp */; };
 		3A47706C1DF9A0D4045568C0 /* ofxGuiGroup.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D015FA91E7717ECC9591593E /* ofxGuiGroup.cpp */; };
 		413A3F52C6AC90B4F28A6A1C /* ofxToggle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 448869D12B9D05298EF975CB /* ofxToggle.cpp */; };
+		446950BB29AD9686008CFC23 /* ringMeshesBrushScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 446950BA29AD9686008CFC23 /* ringMeshesBrushScene.cpp */; };
+		446950BF29AD9F90008CFC23 /* dotProductTubeBrushScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 446950BE29AD9F90008CFC23 /* dotProductTubeBrushScene.cpp */; };
 		448D734929AC5260001A7EDB /* colorLerpBrushScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 448D734829AC5260001A7EDB /* colorLerpBrushScene.cpp */; };
 		448D734D29AC6348001A7EDB /* starTubeBrushScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 448D734C29AC6348001A7EDB /* starTubeBrushScene.cpp */; };
-		448D735129AD422E001A7EDB /* ringMeshesBrushScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 448D735029AD422E001A7EDB /* ringMeshesBrushScene.cpp */; };
 		4B1CB5F54CBBB4D8B474E3A9 /* SyphonNameboundClient.m in Sources */ = {isa = PBXBuildFile; fileRef = A93D555E919DECB48B43C088 /* SyphonNameboundClient.m */; };
 		4D508D34156E7076531D9084 /* Syphon.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = D58DCB2C0AEFDE6171E29540 /* Syphon.framework */; };
 		6F0D599D9FD124B23D0E0F8D /* baseScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 10E77EFB672AD13F3F3639CB /* baseScene.cpp */; };
@@ -60,13 +61,15 @@
 		3123FC43CDB08480B2226A91 /* baseScene.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = baseScene.h; path = src/scenes/baseScene.h; sourceTree = SOURCE_ROOT; };
 		40FDCE53BE9FF4ECD5E9969B /* ofxGuiUtils.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ofxGuiUtils.h; path = ../../addons/ofxGui/src/ofxGuiUtils.h; sourceTree = SOURCE_ROOT; };
 		42C9C53CA63CC693A1B200FF /* ofxSlider.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ofxSlider.h; path = ../../addons/ofxGui/src/ofxSlider.h; sourceTree = SOURCE_ROOT; };
+		446950B929AD9686008CFC23 /* ringMeshesBrushScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ringMeshesBrushScene.h; sourceTree = "<group>"; };
+		446950BA29AD9686008CFC23 /* ringMeshesBrushScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ringMeshesBrushScene.cpp; sourceTree = "<group>"; };
+		446950BD29AD9F90008CFC23 /* dotProductTubeBrushScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dotProductTubeBrushScene.h; sourceTree = "<group>"; };
+		446950BE29AD9F90008CFC23 /* dotProductTubeBrushScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = dotProductTubeBrushScene.cpp; sourceTree = "<group>"; };
 		448869D12B9D05298EF975CB /* ofxToggle.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = ofxToggle.cpp; path = ../../addons/ofxGui/src/ofxToggle.cpp; sourceTree = SOURCE_ROOT; };
 		448D734729AC5260001A7EDB /* colorLerpBrushScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = colorLerpBrushScene.h; sourceTree = "<group>"; };
 		448D734829AC5260001A7EDB /* colorLerpBrushScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = colorLerpBrushScene.cpp; sourceTree = "<group>"; };
 		448D734B29AC6348001A7EDB /* starTubeBrushScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = starTubeBrushScene.h; sourceTree = "<group>"; };
 		448D734C29AC6348001A7EDB /* starTubeBrushScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = starTubeBrushScene.cpp; sourceTree = "<group>"; };
-		448D734F29AD422E001A7EDB /* ringMeshesBrushScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ringMeshesBrushScene.h; sourceTree = "<group>"; };
-		448D735029AD422E001A7EDB /* ringMeshesBrushScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ringMeshesBrushScene.cpp; sourceTree = "<group>"; };
 		4577B15B4EA8356A26832F9B /* ofxSliderGroup.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ofxSliderGroup.h; path = ../../addons/ofxGui/src/ofxSliderGroup.h; sourceTree = SOURCE_ROOT; };
 		4581B326630EC957ED91E25E /* ofxToggle.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ofxToggle.h; path = ../../addons/ofxGui/src/ofxToggle.h; sourceTree = SOURCE_ROOT; };
 		46CFC6BC5CE5CFA5C7DB1BCD /* ofxSyphonClient.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ofxSyphonClient.h; path = ../../addons/ofxSyphon/src/ofxSyphonClient.h; sourceTree = SOURCE_ROOT; };
@@ -306,11 +309,12 @@
 		36BF1C038F5AEC4D85473FE4 /* scenes */ = {
 			isa = PBXGroup;
 			children = (
+				446950BC29AD9F90008CFC23 /* dotProductTubeBrushScene */,
 				448D734A29AC6348001A7EDB /* starTubeBrushScene */,
 				8E3901C78FB50E1AB02F48BF /* dotProductBrushScene */,
 				5918974B2E3BC54FED2E57DF /* starBrushScene */,
 				88CBB54284B6CC6679C63CA0 /* ribbonScene */,
-				448D734E29AD422E001A7EDB /* ringMeshesBrushScene */,
+				446950B829AD9686008CFC23 /* ringMeshesBrushScene */,
 				448D734629AC5260001A7EDB /* colorLerpBrushScene */,
 				C1868819252A931A515C8E7D /* emptyScene */,
 				AADC94833CDD85BD3E3AB12B /* sceneManager.cpp */,
@@ -327,6 +331,26 @@
 				821159A073ABA066739FD401 /* osx */,
 			);
 			name = lib;
+			sourceTree = "<group>";
+		};
+		446950B829AD9686008CFC23 /* ringMeshesBrushScene */ = {
+			isa = PBXGroup;
+			children = (
+				446950B929AD9686008CFC23 /* ringMeshesBrushScene.h */,
+				446950BA29AD9686008CFC23 /* ringMeshesBrushScene.cpp */,
+			);
+			name = ringMeshesBrushScene;
+			path = scenes/ringMeshesBrushScene;
+			sourceTree = "<group>";
+		};
+		446950BC29AD9F90008CFC23 /* dotProductTubeBrushScene */ = {
+			isa = PBXGroup;
+			children = (
+				446950BE29AD9F90008CFC23 /* dotProductTubeBrushScene.cpp */,
+				446950BD29AD9F90008CFC23 /* dotProductTubeBrushScene.h */,
+			);
+			name = dotProductTubeBrushScene;
+			path = scenes/dotProductTubeBrushScene;
 			sourceTree = "<group>";
 		};
 		448D734629AC5260001A7EDB /* colorLerpBrushScene */ = {
@@ -347,15 +371,6 @@
 			);
 			name = starTubeBrushScene;
 			path = scenes/starTubeBrushScene;
-			sourceTree = "<group>";
-		};
-		448D734E29AD422E001A7EDB /* ringMeshesBrushScene */ = {
-			isa = PBXGroup;
-			children = (
-				448D735029AD422E001A7EDB /* ringMeshesBrushScene.cpp */,
-				448D734F29AD422E001A7EDB /* ringMeshesBrushScene.h */,
-			);
-			path = ringMeshesBrushScene;
 			sourceTree = "<group>";
 		};
 		480A780D8D0308AE4A368801 /* ofxGui */ = {
@@ -909,6 +924,7 @@
 				6F0D599D9FD124B23D0E0F8D /* baseScene.cpp in Sources */,
 				20F376ABE82055AF0D1D757C /* dotProductBrushScene.cpp in Sources */,
 				FA0D4902FAA63D187EA61B31 /* ofxBaseGui.cpp in Sources */,
+				446950BF29AD9F90008CFC23 /* dotProductTubeBrushScene.cpp in Sources */,
 				92A50AF72101624C3A8E6446 /* ofxButton.cpp in Sources */,
 				D772C476F63497951AD45BA8 /* ofxColorPicker.cpp in Sources */,
 				3A47706C1DF9A0D4045568C0 /* ofxGuiGroup.cpp in Sources */,
@@ -924,7 +940,7 @@
 				10FB75678D18D1BC4795801A /* ofxSyphonClient.mm in Sources */,
 				004F98E10DEE60853D076FF8 /* ofxSyphonServer.mm in Sources */,
 				C86C5BDFCE12C4EC01F6D191 /* ofxSyphonServerDirectory.mm in Sources */,
-				448D735129AD422E001A7EDB /* ringMeshesBrushScene.cpp in Sources */,
+				446950BB29AD9686008CFC23 /* ringMeshesBrushScene.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
