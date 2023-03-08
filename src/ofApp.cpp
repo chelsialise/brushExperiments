@@ -7,6 +7,7 @@
 #include "dotProductBrushScene.h"
 #include "starTubeBrushScene.h"
 #include "dotProductTubeBrushScene.h"
+#include "dotProductTubeFasterScene.h"
 
 
 //--------------------------------------------------------------
@@ -32,6 +33,7 @@ void ofApp::setup(){
     SM.scenes.push_back(new dotProductBrushScene());
     SM.scenes.push_back(new starTubeBrushScene());
     SM.scenes.push_back(new dotProductTubeBrushScene());
+    SM.scenes.push_back(new dotProductTubeFasterScene());
 
     for (int i = 0; i < SM.scenes.size(); i++){
         
@@ -70,7 +72,7 @@ void ofApp::draw(){
     fbo.end();
     fbo.draw(target);
     
-    //SM.drawGUI();
+    SM.drawGUI();
     
     /// syphon
     server.publishScreen();

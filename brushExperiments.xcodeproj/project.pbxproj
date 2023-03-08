@@ -17,6 +17,7 @@
 		413A3F52C6AC90B4F28A6A1C /* ofxToggle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 448869D12B9D05298EF975CB /* ofxToggle.cpp */; };
 		446950BB29AD9686008CFC23 /* ringMeshesBrushScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 446950BA29AD9686008CFC23 /* ringMeshesBrushScene.cpp */; };
 		446950BF29AD9F90008CFC23 /* dotProductTubeBrushScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 446950BE29AD9F90008CFC23 /* dotProductTubeBrushScene.cpp */; };
+		448CF71329B82B5700A420FF /* dotProductTubeFasterScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 448CF71129B82B5700A420FF /* dotProductTubeFasterScene.cpp */; };
 		448D734929AC5260001A7EDB /* colorLerpBrushScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 448D734829AC5260001A7EDB /* colorLerpBrushScene.cpp */; };
 		448D734D29AC6348001A7EDB /* starTubeBrushScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 448D734C29AC6348001A7EDB /* starTubeBrushScene.cpp */; };
 		4B1CB5F54CBBB4D8B474E3A9 /* SyphonNameboundClient.m in Sources */ = {isa = PBXBuildFile; fileRef = A93D555E919DECB48B43C088 /* SyphonNameboundClient.m */; };
@@ -66,6 +67,8 @@
 		446950BD29AD9F90008CFC23 /* dotProductTubeBrushScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dotProductTubeBrushScene.h; sourceTree = "<group>"; };
 		446950BE29AD9F90008CFC23 /* dotProductTubeBrushScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = dotProductTubeBrushScene.cpp; sourceTree = "<group>"; };
 		448869D12B9D05298EF975CB /* ofxToggle.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = ofxToggle.cpp; path = ../../addons/ofxGui/src/ofxToggle.cpp; sourceTree = SOURCE_ROOT; };
+		448CF71129B82B5700A420FF /* dotProductTubeFasterScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = dotProductTubeFasterScene.cpp; sourceTree = "<group>"; };
+		448CF71229B82B5700A420FF /* dotProductTubeFasterScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dotProductTubeFasterScene.h; sourceTree = "<group>"; };
 		448D734729AC5260001A7EDB /* colorLerpBrushScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = colorLerpBrushScene.h; sourceTree = "<group>"; };
 		448D734829AC5260001A7EDB /* colorLerpBrushScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = colorLerpBrushScene.cpp; sourceTree = "<group>"; };
 		448D734B29AC6348001A7EDB /* starTubeBrushScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = starTubeBrushScene.h; sourceTree = "<group>"; };
@@ -309,6 +312,7 @@
 		36BF1C038F5AEC4D85473FE4 /* scenes */ = {
 			isa = PBXGroup;
 			children = (
+				448CF71029B82B5700A420FF /* dotProductTubeFasterScene */,
 				446950BC29AD9F90008CFC23 /* dotProductTubeBrushScene */,
 				448D734A29AC6348001A7EDB /* starTubeBrushScene */,
 				8E3901C78FB50E1AB02F48BF /* dotProductBrushScene */,
@@ -351,6 +355,16 @@
 			);
 			name = dotProductTubeBrushScene;
 			path = scenes/dotProductTubeBrushScene;
+			sourceTree = "<group>";
+		};
+		448CF71029B82B5700A420FF /* dotProductTubeFasterScene */ = {
+			isa = PBXGroup;
+			children = (
+				448CF71129B82B5700A420FF /* dotProductTubeFasterScene.cpp */,
+				448CF71229B82B5700A420FF /* dotProductTubeFasterScene.h */,
+			);
+			name = dotProductTubeFasterScene;
+			path = scenes/dotProductTubeFasterScene;
 			sourceTree = "<group>";
 		};
 		448D734629AC5260001A7EDB /* colorLerpBrushScene */ = {
@@ -933,6 +947,7 @@
 				0E459598E225E56585AC1CD9 /* ofxPanel.cpp in Sources */,
 				9F74DFA8C0F57500C92936C8 /* ofxSlider.cpp in Sources */,
 				A3C6983F8768ECD6DBA89E0F /* ofxSliderGroup.cpp in Sources */,
+				448CF71329B82B5700A420FF /* dotProductTubeFasterScene.cpp in Sources */,
 				413A3F52C6AC90B4F28A6A1C /* ofxToggle.cpp in Sources */,
 				4B1CB5F54CBBB4D8B474E3A9 /* SyphonNameboundClient.m in Sources */,
 				448D734D29AC6348001A7EDB /* starTubeBrushScene.cpp in Sources */,
