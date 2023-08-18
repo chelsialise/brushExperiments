@@ -3,7 +3,7 @@
 #include "ofMain.h"
 #include "baseScene.h"
 
-class dotProductBrushScene : public baseScene {
+class starTubeScene : public baseScene {
     
 public:
     
@@ -15,8 +15,9 @@ public:
     
     ofPolyline line;
     ofPoint mousePos;
-    vector<ofMesh> meshes;
     int resolution;
-    int radius;
+    float radius;
+    //vector<ofMesh> meshes;
+    //int numDeleted;
     
 };

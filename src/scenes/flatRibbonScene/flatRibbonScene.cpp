@@ -1,40 +1,42 @@
-#include "dotProductTubeFasterScene.h"
+#include "flatRibbonScene.h"
 
 //---------------------------------------------------------------
-void dotProductTubeFasterScene::setup(){
+void flatRibbonScene::setup(){
     
     gui.setup();
-    gui.add(sceneTitle.setup("Scene", "DP Tube - Faster"));
+    gui.add(sceneTitle.setup("Scene", "Flat Ribbon/Ribbon Tube"));
     
 }
 
 
+
 //---------------------------------------------------------------
-void dotProductTubeFasterScene::update(){
+void flatRibbonScene::update(){
    
     mousePos = mousePos * 0.8 + mouseFbo() * 0.2;
     line.addVertex(mousePos);
     
     if (line.size() > 1) {
-        ofPoint curr = line[line.size()-1];
         ofPoint prev = line[line.size()-2];
+        ofPoint curr = line[line.size()-1];
         
         ofPoint diff = curr-prev;
         ofPoint normal = diff.getNormalized();
         
         ofMesh mesh;
         mesh.setMode(OF_PRIMITIVE_TRIANGLE_STRIP);
-        resolution = 50;
+        resolution = 3;
         radius = 225;
         
         for (int j = 0; j < resolution; j++) {
-            float angle = ofMap(j, 0, resolution-1, 0, TWO_PI);
+            //float angle = ofMap(j, 0, resolution-1, 0, TWO_PI); /// horizontal ribbon
+            float angle = ofMap(j, 0, resolution-1, HALF_PI, TWO_PI+HALF_PI); /// vertical ribbon
             
             ofPoint pos1 = prev + radius * ofPoint(cos(angle), sin(angle));
             ofPoint pos2  = curr + radius * ofPoint(cos(angle), sin(angle));
             
-            pos1.z = ofMap(line.size()-2, 0, line.size(), -10, 0); /// not sure if this makes sense
-            pos2.z = ofMap(line.size()-1, 0, line.size(), -10, 0); /// not sure if this makes sense
+            pos1.z = 0.0;
+            pos2.z = 0.1;
             
             mesh.addVertex(pos1);
             mesh.addVertex(pos2);
@@ -62,9 +64,13 @@ void dotProductTubeFasterScene::update(){
 
 
 //---------------------------------------------------------------
-void dotProductTubeFasterScene::draw(){
+void flatRibbonScene::draw(){
     
     ofBackground(245, 245, 245);
+    
+    //ofSetColor(255, 255, 255);
+    //ofSetLineWidth(10);
+    //line.draw();
     
     ofEnableDepthTest();
     for (int i = 0; i < meshes.size(); i++) {
@@ -74,10 +80,5 @@ void dotProductTubeFasterScene::draw(){
         ofPopMatrix();
     }
     ofDisableDepthTest();
-    
-    //ofSetColor(255, 255, 255);
-    //ofSetLineWidth(10);
-    //line.draw();
-    
     
 }

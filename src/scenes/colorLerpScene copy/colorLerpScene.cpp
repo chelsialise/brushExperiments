@@ -1,7 +1,7 @@
-#include "colorLerpBrushScene.h"
+#include "colorLerpScene.h"
 
 //---------------------------------------------------------------
-void colorLerpBrushScene::setup(){
+void colorLerpScene::setup(){
     
     gui.setup();
     gui.add(sceneTitle.setup("Scene", "Color Lerp"));
@@ -10,7 +10,7 @@ void colorLerpBrushScene::setup(){
 
 
 //---------------------------------------------------------------
-void colorLerpBrushScene::update(){
+void colorLerpScene::update(){
    
     mousePos = mousePos * 0.8 + mouseFbo() * 0.2;
     
@@ -45,7 +45,7 @@ void colorLerpBrushScene::update(){
 
 
 //---------------------------------------------------------------
-void colorLerpBrushScene::draw(){
+void colorLerpScene::draw(){
     
     for (int i = 0; i < shapes.size(); i++) {
         shapes[i].draw();

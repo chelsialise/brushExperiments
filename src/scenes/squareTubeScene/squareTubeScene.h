@@ -3,7 +3,7 @@
 #include "ofMain.h"
 #include "baseScene.h"
 
-class ribbonBrushScene : public baseScene {
+class squareTubeScene : public baseScene {
     
 public:
     
@@ -13,10 +13,10 @@ public:
     
     ofxLabel sceneTitle;
     
+    ofPolyline line;
+    vector<ofMesh> meshes;
     ofPoint mousePos;
-    ofPolyline path;
-    ofPoint pos;
-    int numDeleted;
-    
+    int resolution;
+    float radius;
     
 };

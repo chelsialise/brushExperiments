@@ -3,7 +3,7 @@
 #include "ofMain.h"
 #include "baseScene.h"
 
-class ringMeshesBrushScene : public baseScene {
+class colorLerpScene : public baseScene {
     
 public:
     
@@ -14,7 +14,8 @@ public:
     ofxLabel sceneTitle;
     
     ofPoint mousePos;
-    vector<vector<ofMesh>> shapes;
+    vector<ofMesh> shapes;
     int good_i = 0;
+
     
 };

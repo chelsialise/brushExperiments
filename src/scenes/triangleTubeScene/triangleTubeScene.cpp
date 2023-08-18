@@ -1,30 +1,32 @@
-#include "dotProductTubeFasterScene.h"
+#include "triangleTubeScene.h"
 
 //---------------------------------------------------------------
-void dotProductTubeFasterScene::setup(){
+void triangleTubeScene::setup(){
     
     gui.setup();
-    gui.add(sceneTitle.setup("Scene", "DP Tube - Faster"));
+    gui.add(sceneTitle.setup("Scene", "Triangle Tube"));
     
 }
 
 
+
 //---------------------------------------------------------------
-void dotProductTubeFasterScene::update(){
+void triangleTubeScene::update(){
    
     mousePos = mousePos * 0.8 + mouseFbo() * 0.2;
     line.addVertex(mousePos);
     
+    ofEnableDepthTest();
     if (line.size() > 1) {
-        ofPoint curr = line[line.size()-1];
         ofPoint prev = line[line.size()-2];
+        ofPoint curr = line[line.size()-1];
         
         ofPoint diff = curr-prev;
         ofPoint normal = diff.getNormalized();
         
         ofMesh mesh;
         mesh.setMode(OF_PRIMITIVE_TRIANGLE_STRIP);
-        resolution = 50;
+        resolution = 4;
         radius = 225;
         
         for (int j = 0; j < resolution; j++) {
@@ -33,8 +35,8 @@ void dotProductTubeFasterScene::update(){
             ofPoint pos1 = prev + radius * ofPoint(cos(angle), sin(angle));
             ofPoint pos2  = curr + radius * ofPoint(cos(angle), sin(angle));
             
-            pos1.z = ofMap(line.size()-2, 0, line.size(), -10, 0); /// not sure if this makes sense
-            pos2.z = ofMap(line.size()-1, 0, line.size(), -10, 0); /// not sure if this makes sense
+            pos1.z = ofMap(line.size()-2, 0, line.size(), -10, 0); /// don't sure if this makes sense
+            pos2.z = ofMap(line.size()-1, 0, line.size(), -10, 0); /// don't sure if this makes sense
             
             mesh.addVertex(pos1);
             mesh.addVertex(pos2);
@@ -49,6 +51,7 @@ void dotProductTubeFasterScene::update(){
         }
         meshes.push_back(mesh);
     }
+    ofDisableDepthTest();
     
     if (line.size() > 100) {
         line.getVertices().erase(line.begin());
@@ -62,22 +65,19 @@ void dotProductTubeFasterScene::update(){
 
 
 //---------------------------------------------------------------
-void dotProductTubeFasterScene::draw(){
-    
-    ofBackground(245, 245, 245);
-    
-    ofEnableDepthTest();
-    for (int i = 0; i < meshes.size(); i++) {
-        ofPushMatrix();
-        ofTranslate(0, 0, i*0.1);
-        meshes[i].draw();
-        ofPopMatrix();
-    }
-    ofDisableDepthTest();
+void triangleTubeScene::draw(){
     
     //ofSetColor(255, 255, 255);
     //ofSetLineWidth(10);
     //line.draw();
+    
+    ofBackground(245, 245, 245);
+    
+    //ofEnableDepthTest();
+    for (int i = 0; i < meshes.size(); i++) {
+        meshes[i].draw();
+    }
+    //ofDisableDepthTest();
     
     
 }

@@ -1,13 +1,16 @@
 #include "ofApp.h"
 #include "emptyScene.h"
-#include "colorLerpBrushScene.h"
-#include "ringMeshesBrushScene.h"
-#include "ribbonBrushScene.h"
-#include "starBrushScene.h"
-#include "dotProductBrushScene.h"
-#include "starTubeBrushScene.h"
-#include "dotProductTubeBrushScene.h"
+#include "colorLerpScene.h"
+#include "meshRingsScene.h"
+#include "ribbonScene.h"
+#include "starScene.h"
+#include "dotProductScene.h"
+#include "starTubeScene.h"
+#include "dotProductTubeScene.h"
 #include "dotProductTubeFasterScene.h"
+#include "triangleTubeScene.h"
+#include "squareTubeScene.h"
+#include "flatRibbonScene.h"
 
 
 //--------------------------------------------------------------
@@ -17,8 +20,10 @@ void ofApp::setup(){
     int value;
     glGetIntegerv(GL_MAX_TEXTURE_SIZE, &value);
     float total = 8.5 + 8.5;
-    w = (8.5 / total) * (value-1);
-    h = (8.5 / total) * (value-1);
+//    w = (8.5 / total) * (value-1);
+//    h = (8.5 / total) * (value-1);
+    w = 2000;
+    h = 2000;
     fbo.allocate(w, h, GL_RGBA, 4);
     
     /// syphon setup
@@ -26,14 +31,17 @@ void ofApp::setup(){
     
     /// add scenes
     SM.scenes.push_back(new emptyScene());
-    SM.scenes.push_back(new colorLerpBrushScene());
-    SM.scenes.push_back(new ringMeshesBrushScene());
-    SM.scenes.push_back(new ribbonBrushScene());
-    SM.scenes.push_back(new starBrushScene());
-    SM.scenes.push_back(new dotProductBrushScene());
-    SM.scenes.push_back(new starTubeBrushScene());
-    SM.scenes.push_back(new dotProductTubeBrushScene());
+    SM.scenes.push_back(new colorLerpScene());
+    //SM.scenes.push_back(new meshRingsScene());
+    SM.scenes.push_back(new ribbonScene());
+    SM.scenes.push_back(new starScene());
+    SM.scenes.push_back(new dotProductScene());
+    SM.scenes.push_back(new starTubeScene());
+    SM.scenes.push_back(new dotProductTubeScene());
     SM.scenes.push_back(new dotProductTubeFasterScene());
+    SM.scenes.push_back(new triangleTubeScene());
+    SM.scenes.push_back(new squareTubeScene());
+    SM.scenes.push_back(new flatRibbonScene());
 
     for (int i = 0; i < SM.scenes.size(); i++){
         

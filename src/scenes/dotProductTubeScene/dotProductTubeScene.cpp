@@ -1,7 +1,7 @@
-#include "dotProductTubeBrushScene.h"
+#include "dotProductTubeScene.h"
 
 //---------------------------------------------------------------
-void dotProductTubeBrushScene::setup(){
+void dotProductTubeScene::setup(){
     
     gui.setup();
     gui.add(sceneTitle.setup("Scene", "Dot Product Tube"));
@@ -11,7 +11,7 @@ void dotProductTubeBrushScene::setup(){
 
 
 //---------------------------------------------------------------
-void dotProductTubeBrushScene::update(){
+void dotProductTubeScene::update(){
    
     mousePos = mousePos * 0.8 + mouseFbo() * 0.2;
     line.addVertex(mousePos);
@@ -31,35 +31,37 @@ void dotProductTubeBrushScene::update(){
 
 
 //---------------------------------------------------------------
-void dotProductTubeBrushScene::draw(){
+void dotProductTubeScene::draw(){
     
 //    ofSetColor(255, 255, 255);
 //    ofSetLineWidth(10);
 //    line.draw();
     
+    ofBackground(245, 245, 245);
+    
     ofEnableDepthTest();
     for (int i = 0; i < line.size(); i++) {
-        resolution = 50;
-        radius = 500;
         
-        int i_minus_1 = i-1;
-        int i_plus_1 = i+1;
-        if (i_minus_1 < 0) {
-            i_minus_1 = 0;
+        int i_m_1 = i-1; /// index (i) minus 1
+        int i_p_1 = i+1; /// index (i) plus 1
+        if (i_m_1 < 0) {
+            i_m_1 = 0;
         }
-        if (i_plus_1 == line.size()) {
-            i_plus_1 = line.size()-1;
+        if (i_p_1 == line.size()) {
+            i_p_1 = line.size()-1;
         }
         
-        ofPoint prev = line[i_minus_1];
+        ofPoint prev = line[i_m_1];
         ofPoint curr = line[i];
-        ofPoint next = line[i_plus_1];
+        ofPoint next = line[i_p_1];
         
         ofPoint diff = next-prev;
         ofPoint normal = diff.getNormalized();
         
         ofMesh mesh;
         mesh.setMode(OF_PRIMITIVE_TRIANGLE_STRIP);
+        resolution = 50;
+        radius = 225;
         
         for (int j = 0; j < resolution; j++) {
             float angle = ofMap(j, 0, resolution-1, 0, TWO_PI);
@@ -80,8 +82,14 @@ void dotProductTubeBrushScene::draw(){
             
             mesh.addColor(color);
             mesh.addColor(color);
+//            mesh.addColor(ofColor::black);
+//            mesh.addColor(ofColor::black);
+            
         }
+        
         mesh.draw();
+//        mesh.drawWireframe();
+        
     }
     ofDisableDepthTest();
     

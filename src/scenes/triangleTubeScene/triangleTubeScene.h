@@ -3,7 +3,7 @@
 #include "ofMain.h"
 #include "baseScene.h"
 
-class starBrushScene : public baseScene {
+class triangleTubeScene : public baseScene {
     
 public:
     
@@ -13,9 +13,10 @@ public:
     
     ofxLabel sceneTitle;
     
-    ofPolyline path;
-    ofPoint mousePos;
+    ofPolyline line;
     vector<ofMesh> meshes;
-    ofMesh background;
-    int good_i;
+    ofPoint mousePos;
+    int resolution;
+    float radius;
+    
 };

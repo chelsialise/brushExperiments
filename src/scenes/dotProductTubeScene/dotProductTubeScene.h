@@ -3,7 +3,7 @@
 #include "ofMain.h"
 #include "baseScene.h"
 
-class colorLerpBrushScene : public baseScene {
+class dotProductTubeScene : public baseScene {
     
 public:
     
@@ -13,9 +13,9 @@ public:
     
     ofxLabel sceneTitle;
     
+    ofPolyline line;
     ofPoint mousePos;
-    vector<ofMesh> shapes;
-    int good_i = 0;
-
+    int resolution;
+    float radius;
     
 };

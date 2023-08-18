@@ -1,7 +1,7 @@
-#include "starTubeBrushScene.h"
+#include "starTubeScene.h"
 
 //---------------------------------------------------------------
-void starTubeBrushScene::setup(){
+void starTubeScene::setup(){
     
     gui.setup();
     gui.add(sceneTitle.setup("Scene", "Star Tube"));
@@ -10,7 +10,7 @@ void starTubeBrushScene::setup(){
 
 
 //---------------------------------------------------------------
-void starTubeBrushScene::update(){
+void starTubeScene::update(){
    
     mousePos = mousePos * 0.8 + mouseFbo() * 0.2;
     line.addVertex(mousePos);
@@ -23,11 +23,12 @@ void starTubeBrushScene::update(){
 
 
 //---------------------------------------------------------------
-void starTubeBrushScene::draw(){
+void starTubeScene::draw(){
     
 //    ofSetColor(255, 255, 255);
 //    ofSetLineWidth(10);
 //    line.draw();
+    ofBackground(245, 245, 245);
     
     ofEnableDepthTest();
     for (int i = 0; i < line.size()-1; i++){
@@ -42,7 +43,7 @@ void starTubeBrushScene::draw(){
         
         for (int j = 0; j < resolution; j++){
             float angle = ofMap(j, 0, resolution-1, 0, TWO_PI);
-            radius = 500;
+            radius = 250;
             
             ofColor c1 = ofColor(3, 166, 60); /// green
             ofColor c2 = ofColor(242, 53, 53); /// red
@@ -54,15 +55,15 @@ void starTubeBrushScene::draw(){
             ofColor c = lerp1;
             
             if (j % 2 == 0){
-                radius = 300;
+                radius = 175;
                 c = lerp2;
             }
             
             ofPoint pos1 = center1 + radius * ofPoint(cos(angle), sin(angle));
             ofPoint pos2 = center2 + radius * ofPoint(cos(angle), sin(angle));
                 
-            pos1.z = ofMap(i, 0, line.size(), -1, 0);
-            pos2.z = ofMap(i+1, 0, line.size(), -1, 0);
+            pos1.z = ofMap(i, 0, line.size(), -10, 0);
+            pos2.z = ofMap(i+1, 0, line.size(), -10, 0);
                 
             mesh.addVertex(pos1);
             mesh.addVertex(pos2);

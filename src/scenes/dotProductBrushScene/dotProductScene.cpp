@@ -1,7 +1,7 @@
-#include "dotProductBrushScene.h"
+#include "dotProductScene.h"
 
 //---------------------------------------------------------------
-void dotProductBrushScene::setup(){
+void dotProductScene::setup(){
     
     gui.setup();
     gui.add(sceneTitle.setup("Scene", "Dot Product"));
@@ -10,13 +10,13 @@ void dotProductBrushScene::setup(){
 
 
 //---------------------------------------------------------------
-void dotProductBrushScene::update(){
+void dotProductScene::update(){
    
     mousePos = mousePos * 0.2 + mouseFbo() * 0.8;
     line.addVertex(mousePos);
     
     resolution = 50;
-    radius = 500;
+    radius = 150;
     ofMesh mesh;
     mesh.setMode(OF_PRIMITIVE_TRIANGLE_FAN);
     ofPoint center = mousePos;
@@ -42,7 +42,7 @@ void dotProductBrushScene::update(){
         mesh.addVertex(pos);
         
         float pct = ofMap(i, 0, resolution-1, 0, 1);
-        float dot = normal.dot(ofPoint(0,1).getRotated(angle*110, ofPoint(0,0,1)));
+        float dot = normal.dot(ofPoint(0,1).getRotated(sin(angle)*110, ofPoint(0,0,1)));
         ofColor color = ofColor(12, 15, 64) + ofColor::white.getLerped(ofColor::black, ofMap(dot, -1, 1, 0, 1));
         mesh.addColor(color);
     }
@@ -57,7 +57,9 @@ void dotProductBrushScene::update(){
 
 
 //---------------------------------------------------------------
-void dotProductBrushScene::draw(){
+void dotProductScene::draw(){
+    
+    ofBackground(245, 245, 245);
     
     for (int i = 0; i < meshes.size(); i++) {
         meshes[i].draw();

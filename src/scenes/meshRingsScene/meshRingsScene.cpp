@@ -1,7 +1,7 @@
-#include "ringMeshesBrushScene.h"
+#include "meshRingsScene.h"
 
 //---------------------------------------------------------------
-void ringMeshesBrushScene::setup(){
+void meshRingsScene::setup(){
     
     gui.setup();
     gui.add(sceneTitle.setup("Scene", "Ring of Meshes"));
@@ -11,7 +11,7 @@ void ringMeshesBrushScene::setup(){
 
 
 //---------------------------------------------------------------
-void ringMeshesBrushScene::update(){
+void meshRingsScene::update(){
    
     mousePos = mousePos * 0.8 + mouseFbo() * 0.2;
     
@@ -49,7 +49,7 @@ void ringMeshesBrushScene::update(){
 
 
 //---------------------------------------------------------------
-void ringMeshesBrushScene::draw(){
+void meshRingsScene::draw(){
 
     for (int i = 0; i < shapes.size(); i++) {
         for (int j = 0; j < shapes[i].size(); j++) {

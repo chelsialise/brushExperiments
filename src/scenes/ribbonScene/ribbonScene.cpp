@@ -1,19 +1,21 @@
-#include "ribbonBrushScene.h"
+#include "ribbonScene.h"
 
 //---------------------------------------------------------------
-void ribbonBrushScene::setup(){
+void ribbonScene::setup(){
     
     gui.setup();
     gui.add(sceneTitle.setup("Scene", "Ribbon"));
     
     numDeleted = 0;
     
+    
+    
 }
 
 
 
 //---------------------------------------------------------------
-void ribbonBrushScene::update(){
+void ribbonScene::update(){
    
     mousePos = mousePos * 0.5 + mouseFbo() * 0.5;
 
@@ -26,7 +28,9 @@ void ribbonBrushScene::update(){
 
 
 //---------------------------------------------------------------
-void ribbonBrushScene::draw(){
+void ribbonScene::draw(){
+    
+    ofBackground(245, 245, 245);
     
     path.addVertex(mousePos);
     ofPolyline smoothedPath = path.getSmoothed(5);
@@ -40,7 +44,7 @@ void ribbonBrushScene::draw(){
     
     for (int i = 0; i < smoothedPath.size(); i++) {
         
-        int goodi = i + numDeleted;
+        int good_i = i + numDeleted;
         int i_minus_1 = i-1;
         int i_plus_1 = i+1;
         if (i_minus_1 < 0) {
@@ -60,8 +64,8 @@ void ribbonBrushScene::draw(){
         /// make normals
         ofPoint diff = next - prev;
         ofPoint normal = diff.getNormalized();
-        ofPoint topEnd =  curr + normal.getRotated(90, ofPoint(0, 0, 1)) * 100 * (ofMap(vel, 0, 600, 1, 100) * 0.008);
-        ofPoint bottomEnd = curr + normal.getRotated(-90, ofPoint(0, 0, 1)) * 100 * (ofMap(vel, 0, 600, 1, 100) * 0.008);
+        ofPoint topEnd =  curr + normal.getRotated(90, ofPoint(0, 0, 1)) * 100 * (ofMap(vel, 0, 600, 1, 100) * 0.02);
+        ofPoint bottomEnd = curr + normal.getRotated(-90, ofPoint(0, 0, 1)) * 100 * (ofMap(vel, 0, 600, 1, 100) * 0.02);
         
         for (int j = 0; j < meshes.size(); j++) {
             
@@ -81,19 +85,26 @@ void ribbonBrushScene::draw(){
             
             meshes[j].addColor(colorA);
             meshes[j].addColor(colorB);
+//            meshes[j].addColor(ofColor(7,7,7));
+//            meshes[j].addColor(ofColor(7,7,7));
+            
         }
         
         /// draw normals
-        //ofSetColor(0, 0, 0);
-        //ofDrawLine(curr, topEnd);
-        //ofDrawLine(curr, bottomEnd);
+//        ofSetColor(7, 7, 7);
+//        ofSetLineWidth(2);
+//        ofDrawLine(curr, topEnd);
+//        ofDrawLine(curr, bottomEnd);
         
     }
     
     
     for (int i = 0; i < meshes.size(); i++) {
         meshes[i].draw();
+        //meshes[i].drawWireframe();
     }
+    
+    //smoothedPath.draw();
     
     
 }
